@@ -7,6 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>JBoss Tools Integration Stack Target Platform</name>
+  <description>JBoss tools core target platform component dependencies merged with the integration stack component dependencies.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -71,6 +72,13 @@
 
   <build>
     <plugins>
+
+      <plugin>
+	<groupId>org.eclipse.tycho</groupId>
+	<artifactId>tycho-maven-plugin</artifactId>
+	<version>${tychoVersion}</version>
+	<extensions>true</extensions>
+      </plugin>
 
       <plugin>
 	<groupId>org.jboss.tools.tycho-plugins</groupId>
