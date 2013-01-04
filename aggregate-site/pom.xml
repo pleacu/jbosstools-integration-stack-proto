@@ -8,121 +8,19 @@
 
   <name>JBoss Tools Integration Stack Master</name>
   <packaging>eclipse-update-site</packaging>
-  <description>Aggregated JBoss Integration Tools update site.</description>
+  <description>Aggregated JBoss Integration Tools Eclipse update site.</description>
 
   <properties>
-    <tycho-version>0.14.1</tycho-version>
+    <tycho-version>0.16.0</tycho-version>
     <!-- Just in case the Eclipse project version does not match the parent. -->
     <version.switchyard.runtime>0.7.0-SNAPSHOT</version.switchyard.runtime>
   </properties>
 
   <repositories>
     <repository>
-      <id>jbosstools-target-site</id>
-      <url>http://download.jboss.org/jbosstools/updates/juno/SR1a/REPO/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>jbosstools-stable-indigo</id>
-      <url>http://download.jboss.org/jbosstools/updates/stable/indigo/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>graphiti-update-site</id>
-      <url>http://download.eclipse.org/graphiti/updates/0.9.0/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>emf-compare-update-site</id>
-      <url>http://download.eclipse.org/modeling/emf/compare/updates/releases/1.2</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <!-- The following provide dependencies required by the bpmn2 plugin. -->
-    <repository>
-      <id>bpmn2-model-update-site</id>
-      <url>https://hudson.eclipse.org/hudson/job/bpmn2-nightly/lastSuccessfulBuild/artifact/org.eclipse.bpmn2.site/target/site/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>bpmn2-editor-update-site</id>
-      <url>http://download.eclipse.org/bpmn2-modeler/site/0.1.0</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <repository>
-      <id>bpel-editor-update-site</id>
-      <url>http://download.eclipse.org/bpel/site/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <!-- provides ...emf.validation.ocl -->
-    <repository>
-      <id>emf-update-site</id>
-      <url>http://download.eclipse.org/modeling/emf/updates/releases/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-    <!-- provides ..emf.ocl -->
-    <repository>
-      <id>mdt-ocl-update-site</id>
-      <url>http://download.eclipse.org/modeling/mdt/ocl/updates/</url>
-      <layout>p2</layout>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-
-    <repository>
       <id>jboss-integration-tools-site</id>
-      <url>file://home/pleacu/git-clone/jbosstools-integration-stack-proto/releases/</url>
+      <url>file:///home/pleacu/git-clone/jbosstools-integration-stack-proto/releases/</url>
+      <layout>p2</layout>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -130,8 +28,14 @@
         <enabled>true</enabled>
       </releases>
     </repository>
-
   </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tycho-snapshots</id>
+      <url>https://oss.sonatype.org/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -144,18 +48,27 @@
       </plugin>
 
       <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>target-platform-configuration</artifactId>
-        <version>${tycho-version}</version>
-        <configuration>
-          <artifacts>
+	<groupId>org.eclipse.tycho</groupId>
+	<artifactId>target-platform-configuration</artifactId>
+	<version>${tycho-version}</version>
+	<configuration>
+          <environments>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+          </environments>
+	  <target>
 	    <artifact>
-	      <file>compositeArtifacts.xml</file>
-	      <type>xml</type>
-            </artifact>
-          </artifacts>
-        </configuration>
-
+	      <groupId>org.jboss.tools.target-platforms.integration-stack</groupId>
+	      <artifactId>aggregate</artifactId>
+	      <version>0.0.1-SNAPSHOT</version>
+	      <type>target</type>
+	      <classifier>base</classifier>
+	    </artifact>
+	  </target>
+	</configuration>
       </plugin>
 
       <plugin>
@@ -167,7 +80,9 @@
           <archiveSite>true</archiveSite>
         </configuration>
       </plugin>
+
     </plugins>
+
   </build>
 
   <profiles>
@@ -192,6 +107,7 @@
           <name>BUILD_NUMBER</name>
         </property>
       </activation>
+
       <build>
         <plugins>
           <plugin>
@@ -205,6 +121,7 @@
           </plugin>
         </plugins>
       </build>
+
     </profile>
   </profiles>
 

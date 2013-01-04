@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-<description>JBoss Tools Integration Stack Tooling Updates</description>
+<description>JBoss Tools - SOA Integration Stack Tooling Updates</description>
 
 <!-- switchyard -->
 <feature url="features/org.switchyard.tools.feature_0.0.0.jar" id="org.switchyard.tools.feature" version="0.0.0">

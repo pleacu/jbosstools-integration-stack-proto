@@ -1,6 +1,6 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository 
-   name="JBoss Tools Integration Stack - SOA Tooling Development Milestone Update Site" 
+   name="JBoss Integration Tools - Development Milestone Update Site" 
    type="org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository" 
    version="1.0.0">
 
@@ -10,7 +10,7 @@
     <property name="p2.timestamp" value="1353351761000"/>
   </properties>
 
-  <children size="9">
+  <children size="10">
 
     <!-- BPEL -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--bpel/all/repo/"/>
@@ -19,7 +19,7 @@
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--esb/all/repo/"/>
 
     <!-- JBPM -->
-    <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--jbpm/all/repo/"/>
+    <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_trunk.component--jbpm/all/repo/"/>
 
     <!-- RUNTIME-SOA -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--runtime-soa/all/repo/"/>
