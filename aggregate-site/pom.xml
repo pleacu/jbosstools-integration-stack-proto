@@ -6,9 +6,13 @@
   <artifactId>integration-stack-master</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>JBoss Tools Integration Stack Master</name>
+  <name>JBoss Integration Tools Master</name>
   <packaging>eclipse-update-site</packaging>
-  <description>Aggregated JBoss Integration Tools Eclipse update site.</description>
+  <description>
+    Aggregated JBoss Integration Tools Eclipse update site.
+
+    This is the update site project for the layered release of the JBoss Developer Studio tools integration stack.
+  </description>
 
   <properties>
     <tycho-version>0.16.0</tycho-version>
@@ -17,6 +21,8 @@
   </properties>
 
   <repositories>
+
+    <!-- Specify the equinox/p2 Integration Tools composite repo. -->
     <repository>
       <id>jboss-integration-tools-site</id>
       <url>file:///home/pleacu/git-clone/jbosstools-integration-stack-proto/releases/</url>
@@ -31,6 +37,8 @@
   </repositories>
 
   <pluginRepositories>
+
+    <!-- Needed by tycho-eclipse plugin support. -->
     <pluginRepository>
       <id>tycho-snapshots</id>
       <url>https://oss.sonatype.org/content/groups/public/</url>
@@ -51,6 +59,7 @@
 	<groupId>org.eclipse.tycho</groupId>
 	<artifactId>target-platform-configuration</artifactId>
 	<version>${tycho-version}</version>
+
 	<configuration>
           <environments>
             <environment>
@@ -59,6 +68,8 @@
               <arch>x86</arch>
             </environment>
           </environments>
+
+	  <!-- Merged target dependencies of the JBoss core unified target and the JBoss Integration tools. -->
 	  <target>
 	    <artifact>
 	      <groupId>org.jboss.tools.target-platforms.integration-stack</groupId>
@@ -68,6 +79,7 @@
 	      <classifier>base</classifier>
 	    </artifact>
 	  </target>
+
 	</configuration>
       </plugin>
 

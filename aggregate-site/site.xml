@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-<description>JBoss Tools - SOA Integration Stack Tooling Updates</description>
+<description>JBoss Integration Stack Tooling Updates</description>
+
+<category-def name="SOADataServices" label="* SOA and Data Services Tooling">
+  <description>
+SOA and Data Services Tooling for Eclipse - includes support for BPEL, Drools, Guvnor, ESB, jBPM 3, ModeShape, Teiid Designer, and Runtime Detection
+  </description>
+</category-def>
+
+<category-def name="BusinessRules" label="* Business Rules Tooling">
+  <description>
+Business Rules Tooling for Eclipse - includes support for Drools, jBPM 5, and Runtime Detection
+  </description>
+</category-def>
+
+<category-def name="SOATools" label="JBoss SOA Development">
+  <description>
+Tools to help create SOA applications. Use these if you work with jBPM, Drools, JBoss ESB or JBoss WebServices.
+  </description>
+</category-def>
+
+<category-def name="GeneralTools" label="JBoss Application Development">
+  <description>
+Tools for general application development.
+  </description>
+</category-def>
+
+<category-def name="DataTools" label="JBoss Data Services">
+  <description>
+Tools related to data services such as persistence and transformation.
+  </description>
+</category-def>
 
 <!-- switchyard -->
 <feature url="features/org.switchyard.tools.feature_0.0.0.jar" id="org.switchyard.tools.feature" version="0.0.0">
@@ -100,36 +130,6 @@
   <category name="BusinessRules" />
   <category name="SOADataServices" />
 </feature>
-
-<category-def name="SOADataServices" label="* SOA and Data Services Tooling">
-  <description>
-SOA and Data Services Tooling for Eclipse - includes support for BPEL, Drools, Guvnor, ESB, jBPM 3, ModeShape, Teiid Designer, and Runtime Detection
-  </description>
-</category-def>
-
-<category-def name="BusinessRules" label="* Business Rules Tooling">
-  <description>
-Business Rules Tooling for Eclipse - includes support for Drools, jBPM 5, and Runtime Detection
-  </description>
-</category-def>
-
-<category-def name="SOATools" label="JBoss SOA Development">
-  <description>
-Tools to help create SOA applications. Use these if you work with jBPM, Drools, JBoss ESB or JBoss WebServices.
-  </description>
-</category-def>
-
-<category-def name="GeneralTools" label="JBoss Application Development">
-  <description>
-Tools for general application development.
-  </description>
-</category-def>
-
-<category-def name="DataTools" label="JBoss Data Services">
-  <description>
-Tools related to data services such as persistence and transformation.
-  </description>
-</category-def>
 
 <!-- teiid -->
 <feature url="features/org.teiid.datatools.connectivity.feature_0.0.0.jar" id="org.teiid.datatools.connectivity.feature" version="0.0.0">

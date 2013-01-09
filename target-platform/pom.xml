@@ -90,9 +90,10 @@
 
 	<executions>
 	  <execution>
+
 	    <!--
 	       Merge the unified JBoss core target dependencies and the JBoss integration stack tooling target dependencies.
-	      -->
+	       -->
 	    <phase>generate-resources</phase>
 	    <goals>
 	      <goal>merge-targets</goal>
@@ -126,22 +127,29 @@
 
 	<executions>
 	  <execution>
+
+	    <!--
+	       Validate the aggregated target dependencies.
+	       -->
 	    <phase>verify</phase>
 	    <goals>
 	      <goal>validate-target-platform</goal>
 	    </goals>
+
 	    <configuration>
+
 	      <targetFiles>
 		<param>${project.build.directory}/aggregate.target</param>
 	      </targetFiles>
 	      <failOnError>true</failOnError>
+
 	    </configuration>
 	  </execution>
 	</executions>
       </plugin>
 
       <!--
-	 Use codehaus to package the aggegate target dependencies.
+	 Use codehaus to package the aggegated target dependencies.
 	-->
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
@@ -155,7 +163,13 @@
 	    <goals>
 	      <goal>attach-artifact</goal>
 	    </goals>
+
 	    <configuration>
+
+	      <tasks>
+		<echo>Packaging the aggregated target dependencies.</echo>
+	      </tasks>
+
 	      <artifacts>
 		<artifact>
 		  <file>${project.build.directory}/aggregate.target</file>
@@ -163,6 +177,7 @@
 		  <classifier>base</classifier>
 		</artifact>
 	      </artifacts>
+
 	    </configuration>
 	  </execution>
 	</executions>
