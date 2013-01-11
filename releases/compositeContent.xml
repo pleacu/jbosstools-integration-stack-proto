@@ -10,7 +10,7 @@
     <property name="p2.timestamp" value="1353351761000"/>
   </properties>
 
-  <children size="10">
+  <children size="9">
 
     <!-- BPEL -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--bpel/all/repo/"/>
@@ -25,25 +25,26 @@
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--runtime-soa/all/repo/"/>
 
     <!-- DROOLS/JBPM -->
-    <!-- <child location="http://download.jboss.org/jbosstools/updates/stable/indigo/soa-tooling/droolsjbpm/5.4.0.Final/"/> -->
+    <!-- <child location="https://repository.jboss.org/nexus/content/groups/public-jboss/org/drools/org.drools.updatesite/5.5.0.Final/org.drools.updatesite-5.5.0.Final-assembly.zip"/> -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.2_GA.component--droolsjbpm/all/repo/"/>
+    <!-- <child location="https://repository.jboss.org/nexus/content/groups/public-jboss/org/drools/org.drools.updatesite/6.0.0-SNAPSHOT/"/> -->
 
     <!-- MODESHAPE -->
     <!-- <child location="http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/modeshape/3.0.0.Final/"/> -->
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/modeshape-tools-continuous/all/repo/"/> -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.x_Nightly.component--modeshape/all/repo/"/>
 
+    <!-- SAVARA -->
+    <child location="http://downloads.jboss.org/savara/releases/updates/2.x/"/>
+    <!-- <child location="http://downloads.jboss.org/savara/releases/updates/milestones/current"/> -->
+
     <!-- SWITCHYARD -->
-    <!-- <child location="http://download.jboss.org/jbosstools/updates/stable/indigo/soa-tooling/switchyard/0.6.0.Final/"/> -->
+    <!-- <child location="http://download.jboss.org/jbosstools/updates/stable/juno/soa-tooling/switchyard/0.7.0.Final/"/> -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/SwitchYard-Tools/all/"/>
 
-    <!-- SAVARA -->
-    <child location="http://download.jboss.org/savara/releases/updates/2.0.x/"/>
-
-    <!-- TEIID -->
-    <!-- <child location="http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/teiiddesigner/8.0.0.Final/"/> -->
+    <!-- TEIID -->        
+    <!-- <child location="http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/teiddesigner/8.0.0.Final/"/> -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.x_Nightly.component--teiid-designer/all/repo/"/>
-
-    <!-- INTEGRATOR -->
 
   </children>
 
