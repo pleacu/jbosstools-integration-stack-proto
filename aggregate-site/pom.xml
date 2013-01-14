@@ -16,9 +16,10 @@
 
   <properties>
     <tycho-version>0.16.0</tycho-version>
-    <!-- Just in case the Eclipse project version does not match the parent. -->
-    <!-- <version.switchyard.runtime>0.7.0-SNAPSHOT</version.switchyard.runtime> -->
+
+    <!-- Specify a build alias and a relative composite site that's modifiable by a hudson production build. -->
     <BUILD_ALIAS>LOCAL</BUILD_ALIAS>
+    <COMPOSITE_SITE>file://${basedir}/../releases/</COMPOSITE_SITE>
   </properties>
 
   <repositories>
@@ -26,12 +27,7 @@
     <!-- Specify the equinox/p2 Integration Tools composite repo. -->
     <repository>
       <id>jboss-integration-tools-site</id>
-      <url>file://${WORKSPACE}/sources/releases/</url>
-      <!-- <url>file:../releases/</url> -->
-      <!-- <url>file:///${basedir}/../releases/</url> -->
-      <!-- <url>file:///home/pleacu/git-clone/jbosstools-integration-stack-proto/releases/</url> -->
-      <!-- <url>https://jenkins.mw.lab.eng.bos.redhat.com/hudson/job/pleacu-jbosstools-intstack-composite/lastSuccessfulBuild/artifact/sources/releases/</url> -->
-      <!-- <url>http://download.jboss.org/jbosstools/builds/staging/pleacu-jbosstools-intstack-composite/all/</url> -->
+      <url>${COMPOSITE_SITE}</url>
       <layout>p2</layout>
       <snapshots>
         <enabled>true</enabled>
@@ -104,6 +100,7 @@
   </build>
 
   <profiles>
+
     <profile>
       <id>osx</id>
       <activation>
@@ -120,10 +117,12 @@
 
     <profile>
       <id>hudson</id>
+
+      <!-- Production build activation criteria. -->
       <activation>
-        <property>
-          <name>BUILD_NUMBER</name>
-        </property>
+          <property>
+            <name>BUILD_NUMBER</name>
+          </property>
       </activation>
 
       <build>
@@ -141,6 +140,7 @@
       </build>
 
     </profile>
+
   </profiles>
 
 </project>

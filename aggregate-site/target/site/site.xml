@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+<description>JBoss Integration Stack Tooling Updates</description>
+
+<category-def name="SOADataServices" label="* SOA and Data Services Tooling">
+  <description>
+SOA and Data Services Tooling for Eclipse - includes support for BPEL, Drools, Guvnor, ESB, jBPM 3, ModeShape, Teiid Designer, and Runtime Detection
+  </description>
+</category-def>
+
+<category-def name="BusinessRules" label="* Business Rules Tooling">
+  <description>
+Business Rules Tooling for Eclipse - includes support for Drools, jBPM 5, and Runtime Detection
+  </description>
+</category-def>
+
+<category-def name="SOATools" label="JBoss SOA Development">
+  <description>
+Tools to help create SOA applications. Use these if you work with jBPM, Drools, JBoss ESB or JBoss WebServices.
+  </description>
+</category-def>
+
+<category-def name="GeneralTools" label="JBoss Application Development">
+  <description>
+Tools for general application development.
+  </description>
+</category-def>
+
+<category-def name="DataTools" label="JBoss Data Services">
+  <description>
+Tools related to data services such as persistence and transformation.
+  </description>
+</category-def>
+
+<!-- switchyard -->
+<feature url="features/org.switchyard.tools.feature_0.8.0.v20130111-2030-H244-CI.jar" id="org.switchyard.tools.feature" version="0.8.0.v20130111-2030-H244-CI">
+  <category name="AbridgedTools" />
+  <category name="SOATools" />
+</feature>
+
+<feature url="features/org.switchyard.tools.editor.feature_0.8.0.v20130111-2030-H244-CI.jar" id="org.switchyard.tools.editor.feature" version="0.8.0.v20130111-2030-H244-CI">
+  <category name="AbridgedTools" />
+  <category name="SOATools" />
+</feature>
+
+<!-- pi4soa -->
+<feature url="features/org.pi4soa.core.feature_3.1.2.v20120307-2048-H257-Beta2.jar" id="org.pi4soa.core.feature" version="3.1.2.v20120307-2048-H257-Beta2">
+  <category name="SOATools" />
+</feature>
+
+<!-- savara -->
+<feature url="features/org.savara.tools.feature_2.0.0.Final.jar" id="org.savara.tools.feature" version="2.0.0.Final">
+  <category name="SOATools" />
+</feature>
+
+<!-- esb -->
+<feature url="features/org.jboss.tools.esb.feature_1.5.0.Beta2-v20130108-1243-B35.jar" id="org.jboss.tools.esb.feature" version="1.5.0.Beta2-v20130108-1243-B35">
+  <category name="SOADataServices" />
+  <category name="SOATools" />
+</feature>
+
+<!-- esb requires zest -->
+<feature url="features/org.eclipse.zest_1.5.0.201208201742.jar" id="org.eclipse.zest" version="1.5.0.201208201742"/>
+
+<!-- bpel -->
+<feature url="features/org.jboss.tools.bpel.feature_1.1.0.Beta2-v20121220-2021-B47.jar" id="org.jboss.tools.bpel.feature" version="1.1.0.Beta2-v20121220-2021-B47">
+  <category name="SOATools" />
+</feature>
+
+<!-- jbpm -->
+<feature url="features/org.jboss.tools.jbpm.convert.feature_1.0.0.v20120717-1252-H7-GA-SOA.jar" id="org.jboss.tools.jbpm.convert.feature" version="1.0.0.v20120717-1252-H7-GA-SOA">
+  <category name="SOADataServices" />
+  <category name="SOATools" />
+</feature>
+
+<feature url="features/org.jboss.tools.jbpm.common.feature_4.4.0.v20120717-1252-H7-GA-SOA.jar" id="org.jboss.tools.jbpm.common.feature" version="4.4.0.v20120717-1252-H7-GA-SOA">
+</feature>
+
+<feature url="features/org.jboss.tools.jbpm3.feature_3.2.1.v20120717-1252-H7-GA-SOA.jar" id="org.jboss.tools.jbpm3.feature" version="3.2.1.v20120717-1252-H7-GA-SOA">
+  <category name="SOADataServices" />
+  <category name="SOATools" />
+</feature>
+
+<feature url="features/org.jbpm.eclipse.feature_5.3.5.Final.jar" id="org.jbpm.eclipse.feature" version="5.3.5.Final">
+  <category name="BusinessRules" />
+  <category name="SOATools" />
+</feature>
+
+<feature url="features/org.jbpm.eclipse.task.feature_5.3.5.Final.jar" id="org.jbpm.eclipse.task.feature" version="5.3.5.Final">
+  <category name="BusinessRules" />
+  <category name="SOATools" />
+</feature>
+
+<!-- drools -->
+<feature url="features/org.drools.eclipse.feature_5.3.5.Final.jar" id="org.drools.eclipse.feature" version="5.3.5.Final">
+  <category name="SOADataServices" />
+  <category name="BusinessRules" />
+  <category name="SOATools" />
+  <category name="GeneralTools" />
+</feature>
+
+<!-- guvnor -->
+<feature url="features/org.guvnor.tools.feature_5.3.5.Final.jar" id="org.guvnor.tools.feature" version="5.3.5.Final">
+  <category name="SOADataServices" />
+  <category name="SOATools" />
+</feature>
+
+<!-- modeshape -->
+<feature url="features/org.jboss.tools.modeshape.rest.feature_1.1.0.v20121212-2316-H44-Nightly-SOA.jar" id="org.jboss.tools.modeshape.rest.feature" version="1.1.0.v20121212-2316-H44-Nightly-SOA">
+  <category name="SOADataServices" />
+  <category name="DataTools" />
+</feature>
+
+<feature url="features/org.jboss.tools.modeshape.jcr.feature_1.1.0.v20121212-2316-H44-Nightly-SOA.jar" id="org.jboss.tools.modeshape.jcr.feature" version="1.1.0.v20121212-2316-H44-Nightly-SOA">
+  <category name="SOADataServices" />
+  <category name="DataTools" />
+</feature>
+
+<!-- runtime-soa -->
+<feature url="features/org.jboss.tools.runtime.drools.detector.feature_1.4.0.Beta2-v20130105-0903-B61.jar" id="org.jboss.tools.runtime.drools.detector.feature" version="1.4.0.Beta2-v20130105-0903-B61">
+  <category name="BusinessRules" />
+  <category name="SOADataServices" />
+</feature>
+
+<feature url="features/org.jboss.tools.runtime.esb.detector.feature_1.4.0.Beta2-v20130105-0903-B61.jar" id="org.jboss.tools.runtime.esb.detector.feature" version="1.4.0.Beta2-v20130105-0903-B61">
+  <category name="SOADataServices" />
+</feature>
+
+<feature url="features/org.jboss.tools.runtime.jbpm.detector.feature_1.4.0.Beta2-v20130105-0903-B61.jar" id="org.jboss.tools.runtime.jbpm.detector.feature" version="1.4.0.Beta2-v20130105-0903-B61">
+  <category name="BusinessRules" />
+  <category name="SOADataServices" />
+</feature>
+
+<!-- teiid -->
+<feature url="features/org.teiid.datatools.connectivity.feature_7.7.2.v20130108-0859-H176-Nightly-SOA.jar" id="org.teiid.datatools.connectivity.feature" version="7.7.2.v20130108-0859-H176-Nightly-SOA">
+  <category name="DataTools" />
+</feature>
+
+<feature url="features/org.teiid.designer.feature_7.7.2.v20130108-0859-H176-Nightly-SOA.jar" id="org.teiid.designer.feature" version="7.7.2.v20130108-0859-H176-Nightly-SOA">
+  <category name="DataTools" />
+</feature>
+
+<feature url="features/org.teiid.designer.runtime.feature_7.7.2.v20130108-0859-H176-Nightly-SOA.jar" id="org.teiid.designer.runtime.feature" version="7.7.2.v20130108-0859-H176-Nightly-SOA">
+  <category name="DataTools" />
+</feature>
+
+<!-- teiid needs uml2 -->
+<feature url="features/org.eclipse.uml2_4.0.1.v20120913-1441.jar" id="org.eclipse.uml2" version="4.0.1.v20120913-1441">
+</feature>
+
+</site>

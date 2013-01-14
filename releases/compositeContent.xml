@@ -14,18 +14,24 @@
 
     <!-- BPEL -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--bpel/all/repo/"/>
-
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.0_GA.component- -bpel/all/repo/"/> -->
+	
     <!-- ESB -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--esb/all/repo/"/>
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.0_GA.component- -esb/all/repo/"/> -->
 
     <!-- JBPM -->
-    <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_trunk.component--jbpm/all/repo/"/>
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_trunk.component- -jbpm/all/repo/"/> -->
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.x_Nightly.component- -jbpm/all/repo/"/> -->
+    <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.0_GA.component--jbpm/all/repo/"/>
 
     <!-- RUNTIME-SOA -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/jbosstools-4.0_stable_branch.component--runtime-soa/all/repo/"/>
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.2_GA.component- -runtime-soa/all/repo/"/> -->
 
     <!-- DROOLS/JBPM -->
     <!-- <child location="https://repository.jboss.org/nexus/content/groups/public-jboss/org/drools/org.drools.updatesite/5.5.0.Final/org.drools.updatesite-5.5.0.Final-assembly.zip"/> -->
+    <!-- <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.x_Nightly.component- -droolsjbpm/all/repo/"/> -->
     <child location="http://download.jboss.org/jbosstools/builds/staging/soatools-3.3.2_GA.component--droolsjbpm/all/repo/"/>
     <!-- <child location="https://repository.jboss.org/nexus/content/groups/public-jboss/org/drools/org.drools.updatesite/6.0.0-SNAPSHOT/"/> -->
 
