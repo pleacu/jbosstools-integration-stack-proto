@@ -186,4 +186,24 @@
     </plugins>
   </build>
 
+  <!-- Allow the aggregate target dependencies package to be deployed/released into the nexus. -->
+  <distributionManagement>
+
+    <repository>
+      <id>jboss-releases-repository</id>
+      <name>JBoss Releases Repository</name>
+      <uniqueVersion>false</uniqueVersion>
+      <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+      <layout>default</layout>
+    </repository>
+
+    <snapshotRepository>
+      <id>jboss-snapshots-repository</id>
+      <name>JBoss Snapshot Repository</name>
+      <uniqueVersion>false</uniqueVersion>
+      <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      <layout>default</layout>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
