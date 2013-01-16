@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<site>
+<site associateSitesURL="extra-repos.xml">
 <description>JBoss Integration Stack Tooling Updates</description>
 
 <category-def name="SOADataServices" label="* SOA and Data Services Tooling">

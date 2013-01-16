@@ -1,7 +1,4 @@
- # ignore jar objects anywhere in the tree.
-*.jar
-
-./aggregate-site/.settings
-./aggregate-site/.project
-./aggregate-site/target
-./target-platform/target
+.settings/
+.project
+.classpath
+target/
