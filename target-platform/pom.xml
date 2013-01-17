@@ -5,11 +5,12 @@
 
   <groupId>org.jboss.tools.target-platforms.integration-stack</groupId>
   <artifactId>aggregate</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>4.0.0-SNAPSHOT</version>
 
   <name>JBoss Tools Integration Stack Target Platform</name>
   <description>
-    JBoss tools core target platform component dependencies merged with the integration stack component dependencies.
+    JBoss tools core component target dependencies merged with the integration stack component target dependencies
+    forming an 'aggregate.target' combined target.
   </description>
 
   <packaging>pom</packaging>
@@ -91,9 +92,7 @@
 	<executions>
 	  <execution>
 
-	    <!--
-	       Merge the unified JBoss core target dependencies and the JBoss integration stack tooling target dependencies.
-	       -->
+	    <!-- Merge the unified JBoss core target dependencies and the JBoss integration stack tooling target dependencies. -->
 	    <phase>generate-resources</phase>
 	    <goals>
 	      <goal>merge-targets</goal>
@@ -128,9 +127,7 @@
 	<executions>
 	  <execution>
 
-	    <!--
-	       Validate the aggregated target dependencies.
-	       -->
+	    <!--Validate the aggregated target dependencies. -->
 	    <phase>verify</phase>
 	    <goals>
 	      <goal>validate-target-platform</goal>
@@ -148,9 +145,7 @@
 	</executions>
       </plugin>
 
-      <!--
-	 Use codehaus to package the aggegated target dependencies.
-	-->
+      <!-- Use codehaus to package the aggegated target dependencies. -->
       <plugin>
 	<groupId>org.codehaus.mojo</groupId>
 	<artifactId>build-helper-maven-plugin</artifactId>
@@ -204,6 +199,7 @@
       <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
       <layout>default</layout>
     </snapshotRepository>
+
   </distributionManagement>
 
 </project>

@@ -2,8 +2,8 @@
 <?pde version="3.8"?>
 
 <!-- 
-   Target dependencies for the JBDS Integration Platform Tooling (JBoss Integration Tools).
-   JBoss Tools core + third-party dependencies.
+   Target dependencies for the just the JBDS Integration Platform Tooling (JBoss Integration Tools).
+   JBoss Tools core as a dependency + third-party dependencies.
 -->
 
 <target name="integration-tools-extensions" sequenceNumber="7">
@@ -27,9 +27,8 @@
 
     <!-- BPMN2 - Feature -->
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-      <!-- TODO: Need to get these artifacts from a more stable site -->
-      <repository location="https://hudson.eclipse.org/hudson/job/bpmn2-nightly/ws/org.eclipse.bpmn2.site/target/site"/>
       <unit id="org.eclipse.bpmn2.feature.feature.group" version="0.7.0.201211251037"/>
+      <repository location="https://hudson.eclipse.org/hudson/job/bpmn2-nightly/lastSuccessfulBuild/artifact/org.eclipse.bpmn2.site/target/site/"/>
     </location>
 
     <!-- BPMN2 - Modeler -->
@@ -62,8 +61,6 @@
     <!-- JBoss Tools Core -->
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 
-      <repository location="http://download.jboss.org/jbosstools/updates/stable/juno/"/>
-
       <!-- Required by Teiid Designer -->
       <unit id="org.jboss.ide.eclipse.as.core" version="0.0.0"/>
       <unit id="org.jboss.ide.eclipse.as.dmr" version="0.0.0"/>
@@ -86,14 +83,20 @@
       <unit id="org.jboss.tools.common.model.ui" version="0.0.0"/>
       <unit id="org.jboss.tools.common.ui" version="0.0.0"/>
       <unit id="org.jboss.ide.eclipse.as.classpath.core" version="0.0.0"/>
+
+      <repository location="http://download.jboss.org/jbosstools/updates/stable/juno/"/>
+
     </location>
 
     <!-- JBoss Tools Core Tests -->
     <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-      <repository location="http://download.jboss.org/jbosstools/updates/nightly/coretests/4.0.juno/"/>
 
       <!-- Required by BPEL -->
       <unit id="org.jboss.tools.tests" version="0.0.0"/>
+
+      <repository location="http://download.jboss.org/jbosstools/updates/nightly/coretests/4.0.juno/"/>
+
     </location>
+
   </locations>
 </target>

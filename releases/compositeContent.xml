@@ -1,6 +1,6 @@
 <?compositeArtifactRepository version='1.0.0'?>
 <repository 
-   name="JBoss Integration Tools - Development Milestone Update Site" 
+   name="JBoss Integration Tools - Composite Update Site" 
    type="org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository" 
    version="1.0.0">
 
@@ -38,6 +38,8 @@
 
     <!-- TEIID -->        
     <child location="http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/teiddesigner/8.0.0.Final/"/>
+
+    <!-- FUSE -->
 
   </children>
 

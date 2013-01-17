@@ -4,9 +4,9 @@
 
 This project specifies the process for building and releasing the JBoss Developer Studio 
 Integration Platform (JBoss Integration Tools).  The JBoss Integration Tools are comprised of
-layered JBDS features/plugins.  The project provides the ability to build an update site
-which can create an Integration Tools capture which is consistent with its target dependencies
-but independent from releasing with any dependent component. 
+layered JBoss Developer Studio (JBDS) features/plugins.  The project provides the ability to 
+build an update site which establishes an Integration Tools capture that's consistent with its 
+JBoss target dependencies and independently releasable. 
 
 ## Install
 
