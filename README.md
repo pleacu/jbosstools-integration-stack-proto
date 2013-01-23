@@ -2,7 +2,7 @@
 
 ## Summary
 
-This maven/tycho project specifies the process for building the JBoss Developer Studio Integration Platform
+This maven/ tycho project specifies the process for building the JBoss Developer Studio Integration Platform
 (a.k.a JBoss Integration Tools, JBoss Integration Stack).  The JBoss Integration Tools are comprised of
 layered JBoss Developer Studio (JBDS) features/plugins.  The project provides the ability to 
 build both an equinox/p2 update site and a fully resolved aggregate site assembly.  The established Integration 
@@ -41,9 +41,11 @@ Second build the aggregate:
       $ cd .../jbosstools-integration-stack/aggregate-site
       $ mvn clean install
 
-If you just want to check if things compile/ builds you can run:
+Then look for the site_assembly.zip file in your repository.
 
-   $ mvn clean verify -DskipTest=true
+If you just want to check if things compile/ build you can run:
+
+      $ mvn clean verify -DskipTest=true
 
 ## Contribute fixes and features
 
