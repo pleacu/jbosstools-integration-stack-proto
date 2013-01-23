@@ -31,7 +31,7 @@
     <child location="http://download.jboss.org/jbosstools/updates/development/juno/soa-tooling/modeshape/3.0.0.Final/"/>
 
     <!-- SAVARA -->
-    <child location="http://downloads.jboss.org/savara/releases/updates/2.x/"/>
+    <child location="http://download.jboss.org/savara/releases/updates/2.x/"/>
 
     <!-- SWITCHYARD -->
     <child location="http://download.jboss.org/jbosstools/updates/stable/juno/soa-tooling/switchyard/0.7.0.Final/"/>

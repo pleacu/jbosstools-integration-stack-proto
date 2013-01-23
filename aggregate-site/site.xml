@@ -43,11 +43,6 @@ Tools related to data services such as persistence and transformation.
   <category name="SOATools" />
 </feature>
 
-<!-- pi4soa -->
-<feature url="features/org.pi4soa.core.feature_0.0.0.jar" id="org.pi4soa.core.feature" version="0.0.0">
-  <category name="SOATools" />
-</feature>
-
 <!-- savara -->
 <feature url="features/org.savara.tools.feature_0.0.0.jar" id="org.savara.tools.feature" version="0.0.0">
   <category name="SOATools" />
